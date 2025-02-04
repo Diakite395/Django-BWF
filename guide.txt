@@ -1,0 +1,23 @@
+pour test en local Django api et react, il faut configurer django-crs-headers pour permetre a react 
+d'acceder a l'api Django dans le setting de Django:
+
+1. INSTALLED_APPS = [
+     .
+     .
+     'corsheaders',
+     .
+     .
+    ]
+
+2. MIDDLEWARE = [
+     .
+     .
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+     .
+     .
+    ]
+
+3. CORS_ALLOWED_ORIGINS = [
+'http://localhost:3000',
+]
